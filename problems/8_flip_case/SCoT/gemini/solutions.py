@@ -1,5 +1,5 @@
 import re
-from typing import str
+# from typing import str
 
 # --- Solution 1: Using the built-in swapcase() method (Most Idiomatic) ---
 def func1(string: str) -> str:

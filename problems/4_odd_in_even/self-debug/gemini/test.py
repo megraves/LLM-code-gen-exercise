@@ -13,7 +13,10 @@ def check_odd_n_even(func):
         assert func([2, 4, 8]) == 0
         assert func([30, 13, 23, 32]) == 23
         assert func([3, 13, 2, 9]) == 3
+        return True
     except AssertionError:
+        return False
+    except Exception:
         return False
 
 def test_funcs():
@@ -22,4 +25,5 @@ def test_funcs():
 
 def test_pass_at_k():   
     score = pass_at_k(funcs, check_odd_n_even)
+    print(f"Pass@k score: {score}")
     assert score >= 0.5

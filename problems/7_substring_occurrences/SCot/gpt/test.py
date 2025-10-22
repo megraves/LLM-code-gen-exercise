@@ -13,6 +13,8 @@ def check_substring_occurrences(func):
         return True
     except AssertionError:
         return False
+    except Exception:
+        return False
 
 def test_funcs():
     for func in funcs:
@@ -20,4 +22,5 @@ def test_funcs():
 
 def test_pass_at_k():   
     score = pass_at_k(funcs, check_substring_occurrences)
+    print(f"Pass@k score: {score}")
     assert score >= 0.5

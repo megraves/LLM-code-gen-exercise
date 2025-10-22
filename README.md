@@ -20,159 +20,92 @@ Submit one PDF document on Gradescope. The PDF should include:
 ### 1a - Select 10 Programming Problems
 These programming problems were selected from the HumanEval dataset and LeetCode.
 
-1. Permutations [(LeetCode)](https://leetcode.com/problems/permutations/description/)
+1. Hungry Rabbit [(HumanEval/159)](https://huggingface.co/datasets/openai/openai_humaneval/viewer/openai_humaneval/test?p=1&views%5B%5D=test&row=159)
     ```
-    Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.
+    def eat(number, need, remaining):
+    """
+    You're a hungry rabbit, and you already have eaten a certain number of carrots,
+    but now you need to eat more carrots to complete the day's meals.
+    you should return an array of [ total number of eaten carrots after your meals,
+    the number of carrots left after your meals ]
+    if there are not enough remaining carrots, you will eat all remaining carrots, but will still be hungry.
 
-    Example 1:
+    Example:
+    * eat(5, 6, 10) -> [11, 4]
+    * eat(4, 8, 9) -> [12, 1]
+    * eat(1, 10, 10) -> [11, 0]
+    * eat(2, 11, 5) -> [7, 0]
 
-    Input: nums = [1,2,3]
-    Output: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
-    Example 2:
+    Variables:
+    @number : integer
+    the number of carrots that you have eaten.
+    @need : integer
+    the number of carrots that you need to eat.
+    @remaining : integer
+    the number of remaining carrots thet exist in stock
 
-    Input: nums = [0,1]
-    Output: [[0,1],[1,0]]
-    Example 3:
+    Constrain:
+    * 0 <= number <= 1000
+    * 0 <= need <= 1000
+    * 0 <= remaining <= 1000
 
-    Input: nums = [1]
-    Output: [[1]]
-    
-
-    Constraints:
-
-    1 <= nums.length <= 6
-    -10 <= nums[i] <= 10
-    All the integers of nums are unique.
-    ```
-
-2. Palindrome Number [(LeetCode)](https://leetcode.com/problems/palindrome-number/description/)
-    ```
-    Given an integer x, return true if x is a palindrome, and false otherwise. 
-
-    Example 1:
-
-    Input: x = 121
-    Output: true
-    Explanation: 121 reads as 121 from left to right and from right to left.
-    Example 2:
-
-    Input: x = -121
-    Output: false
-    Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
-    Example 3:
-
-    Input: x = 10
-    Output: false
-    Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
-    
-
-    Constraints:
-
-    -231 <= x <= 231 - 1
-    
-
-    Follow up: Could you solve it without converting the integer to a string?
+    Have fun :)
+    """
     ```
 
-3. Two Sum [(LeetCode)](https://leetcode.com/problems/two-sum/description/)
+2. Make a Pile [(HumanEval/100)](https://huggingface.co/datasets/openai/openai_humaneval/viewer/openai_humaneval/test?p=1&views%5B%5D=test&row=100)
     ```
-    Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+    def make_a_pile(n):
+    """
+    Given a positive integer n, you have to make a pile of n levels of stones.
+    The first level has n stones.
+    The number of stones in the next level is:
+    - the next odd number if n is odd.
+    - the next even number if n is even.
+    Return the number of stones in each level in a list, where element at index
+    i represents the number of stones in the level (i+1).
 
-    You may assume that each input would have exactly one solution, and you may not use the same element twice.
-
-    You can return the answer in any order.
-
-    Example 1:
-
-    Input: nums = [2,7,11,15], target = 9
-    Output: [0,1]
-    Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
-    Example 2:
-
-    Input: nums = [3,2,4], target = 6
-    Output: [1,2]
-    Example 3:
-
-    Input: nums = [3,3], target = 6
-    Output: [0,1]
-    
-
-    Constraints:
-
-    2 <= nums.length <= 104
-    -109 <= nums[i] <= 109
-    -109 <= target <= 109
-    Only one valid answer exists.
-    
-
-    Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
+    Examples:
+    >>> make_a_pile(3)
+    [3, 5, 7]
+    """
     ```
 
-4. Add Binary [(LeetCode)](https://leetcode.com/problems/add-binary/description/)
+3. Words String [(HumanEval/101)](https://huggingface.co/datasets/openai/openai_humaneval/viewer/openai_humaneval/test?p=1&views%5B%5D=test&row=101)
     ```
-    Given two binary strings a and b, return their sum as a binary string.
+    def words_string(s):
+    """
+    You will be given a string of words separated by commas or spaces. Your task is
+    to split the string into words and return an array of the words.
 
-    Example 1:
-
-    Input: a = "11", b = "1"
-    Output: "100"
-    Example 2:
-
-    Input: a = "1010", b = "1011"
-    Output: "10101"
-    
-
-    Constraints:
-
-    1 <= a.length, b.length <= 104
-    a and b consist only of '0' or '1' characters.
-    Each string does not contain leading zeros except for the zero itself.
+    For example:
+    words_string("Hi, my name is John") == ["Hi", "my", "name", "is", "John"]
+    words_string("One, two, three, four, five, six") == ["One", "two", "three", "four", "five", "six"]
+    """
     ```
 
-5. Valid Parenthesis [(LeetCode)](https://leetcode.com/problems/valid-parentheses/description/)
+4. Odd in Even [(HumanEval/121)](https://huggingface.co/datasets/openai/openai_humaneval/viewer/openai_humaneval/test?p=1&views%5B%5D=test&row=121)
     ```
-    Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+    def solution(lst):
+    """Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.
 
-    An input string is valid if:
+    Examples
+    solution([5, 8, 7, 1]) ==> 12
+    solution([3, 3, 3, 3, 3]) ==> 9
+    solution([30, 13, 24, 321]) ==>0
+    """
+    ```
 
-    Open brackets must be closed by the same type of brackets.
-    Open brackets must be closed in the correct order.
-    Every close bracket has a corresponding open bracket of the same type.
+5. Unit Rescale [(HumanEval/21)](https://huggingface.co/datasets/openai/openai_humaneval/viewer/openai_humaneval/test?row=21)
+    ```
+    from typing import List
 
-    Example 1:
-
-    Input: s = "()"
-
-    Output: true
-
-    Example 2:
-
-    Input: s = "()[]{}"
-
-    Output: true
-
-    Example 3:
-
-    Input: s = "(]"
-
-    Output: false
-
-    Example 4:
-
-    Input: s = "([])"
-
-    Output: true
-
-    Example 5:
-
-    Input: s = "([)]"
-
-    Output: false
-
-    Constraints:
-
-    1 <= s.length <= 104
-    s consists of parentheses only '()[]{}'.
+    def rescale_to_unit(numbers: List[float]) -> List[float]:
+    """ Given list of numbers (of at least two elements), apply a linear transform to that list,
+    such that the smallest number will become 0 and the largest will become 1
+    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])
+    [0.0, 0.25, 0.5, 0.75, 1.0]
+    """
     ```
 
 6. Sum Product [(HumanEval1/8)](https://huggingface.co/datasets/openai/openai_humaneval/viewer/openai_humaneval/test?views%5B%5D=test&row=8)
@@ -234,155 +167,85 @@ These programming problems were selected from the HumanEval dataset and LeetCode
 
 ### 1b - Prompts, Code Generation, and Results
 
-1. Permutations
+Each file in the `problems` directory has the prompts and generated files across two different LLMs:
 
-    Gemini
-    |    | Prompting Strategy | Prompt | Tests | Solution | pass@k | Explanation |
-    |----|--------------------|--------|-------|----------|--------|-------------|
-    | 1. |                    |        |       |          |        |             |
-    | 2. |                    |        |       |          |        |             |
+```
+problems
+    |
+    ---+ problem_name
+        |
+        ---+ prompting_strat_1
+        |       |
+        |       ---+ LLM_1
+        |       |   |
+        |       |   ---+ solutions.md       # shows the generated solution from the 
+        |       |   ---+ solutions.py       # shows the generated code (k=five different functions)
+        |       |   ---+ test.py            # implements the test from HumanEval on all five functions (run with pytest)
+        |       ---+ LLM_2  
+        |       ---+ strat-prompt.md        # shows the prompt given to the LLMs based on the given strategy
+        ---+ prompting_strat_2
+```  
 
-    GPT-4
-    |    | Prompting Strategy | Prompt | Tests | Solution | pass@k | Explanation |
-    |----|--------------------|--------|-------|----------|--------|-------------|
-    | 1. |                    |        |       |          |        |             |
-    | 2. |                    |        |       |          |        |             |
+The results are as follows using the pass@k metric.
 
+| #1          | Gemini | GPT    |
+|-------------|--------|--------|
+| Prompting   | pass@k | pass@k |
+| scot        | 1.0    | 1.0    |
+| self-edit   | 1.0    | 1.0    |
 
-2. Palindrome Number
+| #2          | Gemini | GPT    |
+|-------------|--------|--------|
+| Prompting   | pass@k | pass@k |
+| cot         | 1.0    | 1.0    |
+| self-debug  | 1.0    | 1.0    |
 
-    Gemini
-    |    | Prompting Strategy | Prompt | Tests | Solution | pass@k | Explanation |
-    |----|--------------------|--------|-------|----------|--------|-------------|
-    | 1. |                    |        |       |          |        |             |
-    | 2. |                    |        |       |          |        |             |
+| #3          | Gemini | GPT    |
+|-------------|--------|--------|
+| Prompting   | pass@k | pass@k |
+| scot        | 1.0    | 1.0    |
+| self-plan   | 1.0    | 1.0    |
 
-    GPT-4
-    |    | Prompting Strategy | Prompt | Tests | Solution | pass@k | Explanation |
-    |----|--------------------|--------|-------|----------|--------|-------------|
-    | 1. |                    |        |       |          |        |             |
-    | 2. |                    |        |       |          |        |             |
+| #4          | Gemini | GPT    |
+|-------------|--------|--------|
+| Prompting   | pass@k | pass@k |
+| cot         | 1.0    | 1.0    |
+| self-debug  | 1.0    | 1.0    |
 
+| #5          | Gemini | GPT    |
+|-------------|--------|--------|
+| Prompting   | pass@k | pass@k |
+| scot        | 1.0    | 1.0    |
+| self-edit   | 1.0    | 1.0    |
 
-3. Two Sum
+| #6          | Gemini | GPT    |
+|-------------|--------|--------|
+| Prompting   | pass@k | pass@k |
+| cot         | 1.0    | 1.0    |
+| self-edit   | 1.0    | 1.0*   |
+*The gpt had an import error related to by local environment `import numpy as np`. When running `pip install numpy`, all funcs ran and passed. 
 
-    Gemini
-    |    | Prompting Strategy | Prompt | Tests | Solution | pass@k | Explanation |
-    |----|--------------------|--------|-------|----------|--------|-------------|
-    | 1. |                    |        |       |          |        |             |
-    | 2. |                    |        |       |          |        |             |
+| #7          | Gemini | GPT    |
+|-------------|--------|--------|
+| Prompting   | pass@k | pass@k |
+| scot        | 1.0    | 1.0    |
+| self-repair | 1.0    | 1.0    |
 
-    GPT-4
-    |    | Prompting Strategy | Prompt | Tests | Solution | pass@k | Explanation |
-    |----|--------------------|--------|-------|----------|--------|-------------|
-    | 1. |                    |        |       |          |        |             |
-    | 2. |                    |        |       |          |        |             |
+| #8          | Gemini | GPT    |
+|-------------|--------|--------|
+| Prompting   | pass@k | pass@k |
+| scot        | 1.0*   | 1.0    |
+| self-plan   | 1.0    | 1.0    |
+*The gemini had an import error when using `from typing import str`. When commented out, all funcs ran and passed.
 
+| #9          | Gemini | GPT    |
+|-------------|--------|--------|
+| Prompting   | pass@k | pass@k |
+| self-plan   | 1.0    | 1.0    |
+| cot         | 1.0    | 1.0    |
 
-4. Add Binary
-
-    Gemini
-    |    | Prompting Strategy | Prompt | Tests | Solution | pass@k | Explanation |
-    |----|--------------------|--------|-------|----------|--------|-------------|
-    | 1. |                    |        |       |          |        |             |
-    | 2. |                    |        |       |          |        |             |
-
-    GPT-4
-    |    | Prompting Strategy | Prompt | Tests | Solution | pass@k | Explanation |
-    |----|--------------------|--------|-------|----------|--------|-------------|
-    | 1. |                    |        |       |          |        |             |
-    | 2. |                    |        |       |          |        |             |
-
-
-5. Valid Parenthesis
-
-    Gemini
-    |    |Prompt Strat |    Prompt        | Tests | Solution | pass@k | Explanation |
-    |----|--------------------|------------------|-------|----------|--------|-------------|
-    | 1. | C-o-T  |[img](./6-prompt.png)|       |          |     |          |
-    | 2. |                    |                |       |          |        |             |
-
-    GPT-4
-    |    | Prompting Strategy | Prompt | Tests | Solution | pass@k | Explanation |
-    |----|--------------------|--------|-------|----------|--------|-------------|
-    | 1. |                    |        |       |          |        |             |
-    | 2. |                    |        |       |          |        |             |
-
-
-6. Sum Product
-
-    Gemini
-    |    | Prompting Strategy | Prompt | Tests | Solution | pass@k | Explanation |
-    |----|--------------------|--------|-------|----------|--------|-------------|
-    | 1. |                    |        |       |          |        |             |
-    | 2. |                    |        |       |          |        |             |
-
-    GPT-4
-    |    | Prompting Strategy | Prompt | Tests | Solution | pass@k | Explanation |
-    |----|--------------------|--------|-------|----------|--------|-------------|
-    | 1. |                    |        |       |          |        |             |
-    | 2. |                    |        |       |          |        |             |
-
-
-7. How Many Times Substring
-
-    Gemini
-    |    | Prompting Strategy | Prompt | Tests | Solution | pass@k | Explanation |
-    |----|--------------------|--------|-------|----------|--------|-------------|
-    | 1. |                    |        |       |          |        |             |
-    | 2. |                    |        |       |          |        |             |
-
-    GPT-4
-    |    | Prompting Strategy | Prompt | Tests | Solution | pass@k | Explanation |
-    |----|--------------------|--------|-------|----------|--------|-------------|
-    | 1. |                    |        |       |          |        |             |
-    | 2. |                    |        |       |          |        |             |
-
-
-8. Flip Case
-
-    Gemini
-    |    | Prompting Strategy | Prompt | Tests | Solution | pass@k | Explanation |
-    |----|--------------------|--------|-------|----------|--------|-------------|
-    | 1. |                    |        |       |          |        |             |
-    | 2. |                    |        |       |          |        |             |
-
-    GPT-4
-    |    | Prompting Strategy | Prompt | Tests | Solution | pass@k | Explanation |
-    |----|--------------------|--------|-------|----------|--------|-------------|
-    | 1. |                    |        |       |          |        |             |
-    | 2. |                    |        |       |          |        |             |
-
-
-9.  Sorted Unique Elements
-
-    Gemini
-    |    | Prompting Strategy | Prompt | Tests | Solution | pass@k | Explanation |
-    |----|--------------------|--------|-------|----------|--------|-------------|
-    | 1. |                    |        |       |          |        |             |
-    | 2. |                    |        |       |          |        |             |
-
-    GPT-4
-    |    | Prompting Strategy | Prompt | Tests | Solution | pass@k | Explanation |
-    |----|--------------------|--------|-------|----------|--------|-------------|
-    | 1. |                    |        |       |          |        |             |
-    | 2. |                    |        |       |          |        |             |
-
-
-10. Largest Prime Factor
-
-    Gemini
-    |    | Prompting Strategy | Prompt | Tests | Solution | pass@k | Explanation |
-    |----|--------------------|--------|-------|----------|--------|-------------|
-    | 1. |                    |        |       |          |        |             |
-    | 2. |                    |        |       |          |        |             |
-
-    GPT-4
-    |    | Prompting Strategy | Prompt | Tests | Solution | pass@k | Explanation |
-    |----|--------------------|--------|-------|----------|--------|-------------|
-    | 1. |                    |        |       |          |        |             |
-    | 2. |                    |        |       |          |        |             |
-
-    
-
-## Part 2 - Failure Problems
+| #10         | Gemini | GPT    |
+|-------------|--------|--------|
+| Prompting   | pass@k | pass@k |
+| self-repair | 1.0    | 1.0    |
+| cot         | 1.0    | 1.0    |

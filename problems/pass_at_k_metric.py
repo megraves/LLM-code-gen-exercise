@@ -19,18 +19,18 @@ def pass_at_k(funcs, test):
         return 0.0
 
     # Count correct implementations.
-    c = 0
+    c = 0.0
     for func in funcs:
         try:
             if test(func):
-                c += 1
+                c += 1.0
         except Exception:
             # Treat thrown exceptions as failing the test.
             # Optionally log the exception for debugging.
             continue
 
     # If none pass, probability is 0.
-    if c == 0:
+    if c == 0.0:
         return 0.0
 
     # If k > n-c then C(n-c, k) = 0 (no way to choose k wrong-only items),

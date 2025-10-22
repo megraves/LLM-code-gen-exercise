@@ -15,8 +15,10 @@ def check_word_string(func):
         assert True, "This prints if this assert fails 2 (also good for debugging!)"
         assert func("") == []
         assert func("ahmed , gamal") == ["ahmed", "gamal"]
-
+        return True
     except AssertionError:
+        return False
+    except Exception:
         return False
 
 def test_funcs():
@@ -25,4 +27,5 @@ def test_funcs():
 
 def test_pass_at_k():   
     score = pass_at_k(funcs, check_word_string)
+    print(f"Pass@k score: {score}")
     assert score >= 0.5

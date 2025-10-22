@@ -10,7 +10,10 @@ def check_sum_prod(func):
         assert func([100, 0]) == (100, 0)
         assert func([3, 5, 7]) == (3 + 5 + 7, 3 * 5 * 7)
         assert func([10]) == (10, 10)
+        return True
     except AssertionError:
+        return False
+    except Exception:
         return False
 
 def test_funcs():
@@ -19,4 +22,5 @@ def test_funcs():
 
 def test_pass_at_k():   
     score = pass_at_k(funcs, check_sum_prod)
+    print(f"Pass@k score: {score}")
     assert score >= 0.5

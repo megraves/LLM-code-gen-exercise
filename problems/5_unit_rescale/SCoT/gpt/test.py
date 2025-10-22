@@ -8,7 +8,10 @@ def check_rescale(func):
         assert func([1.0, 2.0, 3.0, 4.0, 5.0]) == [0.0, 0.25, 0.5, 0.75, 1.0]
         assert func([2.0, 1.0, 5.0, 3.0, 4.0]) == [0.25, 0.0, 1.0, 0.5, 0.75]
         assert func([12.0, 11.0, 15.0, 13.0, 14.0]) == [0.25, 0.0, 1.0, 0.5, 0.75]
+        return True
     except AssertionError:
+        return False
+    except Exception:
         return False
 
 def test_funcs():
@@ -17,4 +20,5 @@ def test_funcs():
 
 def test_pass_at_k():   
     score = pass_at_k(funcs, check_rescale)
+    print(f"Pass@k score: {score}")
     assert score >= 0.5

@@ -16,7 +16,10 @@ def check_rabbit(func):
         assert True, "This prints if this assert fails 2 (also good for debugging!)"
         assert func(4, 5, 7) == [9, 2], "Error"
         assert func(4, 5, 1) == [5, 0], "Error"
+        return True
     except AssertionError:
+        return False
+    except Exception:
         return False
 
 def test_funcs():
@@ -25,4 +28,5 @@ def test_funcs():
 
 def test_pass_at_k():   
     score = pass_at_k(funcs, check_rabbit)
+    print(f"Pass@k score: {score}")
     assert score >= 0.5

@@ -62,31 +62,4 @@ def func5(s: str) -> str:
     # Using [A-Za-z] keeps the regex fast; change to r'\w' or r'\p{L}' with regex module for more coverage.
     return re.sub(r'[A-Za-z]', flip, s)
 
-# Optional: a small runner to demonstrate behavior for examples / tests
-if __name__ == "__main__":
-    examples = [
-        "Hello",
-        "",
-        "123 AbC!",
-        "ß",                # special unicode (sharp s)
-        "Σσ",               # Greek sigma examples
-        "mañana",           # contains non-ASCII letter ñ
-        "Mixed: aB1!@#Zz"
-    ]
-
-    funcs: list[tuple[str, Callable[[str], str]]] = [
-        ("func1 (swapcase)", func1),
-        ("func2 (comp)", func2),
-        ("func3 (translate ASCII)", func3),
-        ("func4 (ord/chr ASCII)", func4),
-        ("func5 (regex)", func5),
-    ]
-
-    for text in examples:
-        print(f"Input: {repr(text)}")
-        for name, f in funcs:
-            print(f"  {name}: {repr(f(text))}")
-        print()
-
-
 funcs = [func1, func2, func3, func4, func5]
