@@ -12,13 +12,12 @@ Submit one PDF document on Gradescope. The PDF should include:
 
 ## Part 0 - Choose at least 2 LLMs from different families
 - GPT-4
-- LLaMa-2
-- Gemini
+- Gemini 2.5 Flash
 
 
 ## Part 1 - Prompt Design and Code Generation
 ### 1a - Select 10 Programming Problems
-These programming problems were selected from the HumanEval dataset and LeetCode.
+These programming problems were selected from the HumanEval dataset.
 
 1. Hungry Rabbit [(HumanEval/159)](https://huggingface.co/datasets/openai/openai_humaneval/viewer/openai_humaneval/test?p=1&views%5B%5D=test&row=159)
     ```
@@ -167,7 +166,7 @@ These programming problems were selected from the HumanEval dataset and LeetCode
 
 ### 1b - Prompts, Code Generation, and Results
 
-Each file in the `problems` directory has the prompts and generated files across two different LLMs:
+After coming up with a prompt, I fed it to the respective LLM platform and copied the results to this repository in order to test it. Each file in the `problems` directory has the prompts and generated files across two different LLMs:
 
 ```
 problems
@@ -186,6 +185,8 @@ problems
         ---+ prompting_strat_2
 ```  
 
+
+#### Results
 The results are as follows using the pass@k metric.
 
 | #1          | Gemini | GPT    |
@@ -223,6 +224,7 @@ The results are as follows using the pass@k metric.
 | Prompting   | pass@k | pass@k |
 | cot         | 1.0    | 1.0    |
 | self-edit   | 1.0    | 1.0*   |
+
 *The gpt had an import error related to by local environment `import numpy as np`. When running `pip install numpy`, all funcs ran and passed. 
 
 | #7          | Gemini | GPT    |
@@ -236,6 +238,7 @@ The results are as follows using the pass@k metric.
 | Prompting   | pass@k | pass@k |
 | scot        | 1.0*   | 1.0    |
 | self-plan   | 1.0    | 1.0    |
+
 *The gemini had an import error when using `from typing import str`. When commented out, all funcs ran and passed.
 
 | #9          | Gemini | GPT    |
@@ -249,3 +252,30 @@ The results are as follows using the pass@k metric.
 | Prompting   | pass@k | pass@k |
 | self-repair | 1.0    | 1.0    |
 | cot         | 1.0    | 1.0    |
+
+## Part 2: Debugging and Improvement
+
+All of these passed with flying colors, I need harder problems!
+After some research, I found [this problem](https://peter-kullmann.medium.com/all-major-llms-struggle-with-this-simple-programming-task-3e6903fae3a2) and was curious. It was published a year ago, have LLMs learned it yet? This will be my 11th problem
+
+| #11         | Gemini | GPT    |
+|-------------|--------|--------|
+| Prompting   | pass@k | pass@k |
+| Given       | 0.0    | 0.0    |
+
+All of the tests fail for both LLMs. Maybe this one is too hard. I am going to use the following prompt to encourage the model to debug and make changes. Some of the tests they were failing included edge cases.
+
+**New Prompt:**
+```
+Re-evaluate your code and think about edge cases. What if three of the same rectangles are the given input? The output would be a description of the outline of that same rectangle. What if the three input rectangles were really just the same point? The output would be that point.
+```
+
+**Result:**
+This did not improve the generated code. Gemini gave up and instead of producing five different functions, it made one (which was still incorrect) and referenced it as a helper function in the four other functions. Meanwhile, gpt was still struggling with the given case from the first prompt even after making edits. Like mentioned in the article, this problems requires graphical understanding making it much more complex than simple computational problems. I think I could continue to prompt to reach a solid answer, but it would probably be more like walking the model through the solution.
+
+## Part 3: Innovation
+
+### My Strategy:
+If I were to come up with a strategy, I would call it role-play. Basically, we will give the LLM a persona. When we tell the LLM who to be or what characteristics to have, then the LLM will reply as that character would. This could be helpful if we are doing something that requires research, analytics, attention to detail, or maybe even an overarching perspective. I find that this method is helpful when I am using LLMs for my learning. If I am reading a difficult paper, I may feed the LLM some text and have it "teach" it to me as if it were a "highschool teacher who loves analogies." For me, this has made reading scientific papers much more digestible.
+
+If there is a large amount of text to read, this process can become iterative. I ask the LLM to focus on an area (one that I am not understanding). Asking the LLM to break it down further has allowed better, more descriptive and clear, responses for areas that might need more explaining.

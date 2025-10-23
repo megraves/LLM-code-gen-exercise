@@ -1,0 +1,1 @@
+Re-evaluate your code and think about edge cases. What if three of the same rectangles are the given input? The output would be a description of the outline of that same rectangle. What if the three input rectangles were really just the same point? The output would be that point.
