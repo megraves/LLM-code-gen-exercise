@@ -140,4 +140,4 @@ def func5(rects):
 
     return simplified_path
 
-func = [func1, func2, func3, func4, func5]
+second_gemini = [func1, func2, func3, func4, func5]
