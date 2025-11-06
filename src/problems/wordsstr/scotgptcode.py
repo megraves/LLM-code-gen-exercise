@@ -25,4 +25,4 @@ def func5(s):
     """Use regex to find all word sequences."""
     return re.findall(r'\b\w+\b', s)
 
-funcs = [func1, func2, func3, func4, func5]
+scot_gpt = [func1, func2, func3, func4, func5]

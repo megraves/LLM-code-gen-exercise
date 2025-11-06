@@ -76,4 +76,4 @@ def func5(lst):
             total += element
     return total
 
-funcs = [func1, func2, func3, func4, func5]
+sdebug_gemini = [func1, func2, func3, func4, func5]

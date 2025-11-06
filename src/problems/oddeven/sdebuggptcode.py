@@ -27,4 +27,4 @@ def func5(lst):
 
 
 
-funcs = [func1, func2, func3, func4, func5]
+sdebug_gpt = [func1, func2, func3, func4, func5]

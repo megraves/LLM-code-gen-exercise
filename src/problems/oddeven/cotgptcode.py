@@ -23,4 +23,4 @@ def func4(lst):
 def func5(lst):
     return sum(filter(lambda x: x % 2 != 0, lst[::2]))
 
-funcs = [func1, func2, func3, func4, func5]
+cot_gpt = [func1, func2, func3, func4, func5]

@@ -46,4 +46,4 @@ def func5(s):
     return list(filter(None, s.replace(",", " ").split()))
 
 
-funcs = [func1, func2, func3, func4, func5]
+splan_gpt = [func1, func2, func3, func4, func5]

@@ -128,4 +128,4 @@ print(f"func5 (Iterative Split):       {func5(test_string)}")
 
 # Expected Output for all: ['apple', 'banana', 'orange', 'grape', 'kiwi']
 
-funcs = [func1, func2, func3, func4, func5]
+scot_gemini = [func1, func2, func3, func4, func5]

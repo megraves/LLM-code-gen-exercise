@@ -101,4 +101,4 @@ def func5(s: str) -> list[str]:
     return result
 
 
-funcs = [func1, func2, func3, func4, func5]
+splan_gemini = [func1, func2, func3, func4, func5]
