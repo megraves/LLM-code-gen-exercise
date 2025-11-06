@@ -106,4 +106,4 @@ if __name__ == '__main__':
         is_correct = "CORRECT" if result == expected_result else "INCORRECT"
         print(f"{name}: {result} ({is_correct})")
 
-funcs = [func1, func2, func3, func4, func5]
+cot_gemini = [func1, func2, func3, func4, func5]

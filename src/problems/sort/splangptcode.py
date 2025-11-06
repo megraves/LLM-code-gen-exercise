@@ -62,4 +62,4 @@ if __name__ == "__main__":
         print(f"{f.__name__}: {result} (✓ {result == expected_output})")
 
 
-funcs = [func1, func2, func3, func4, func5]
+splan_gpt = [func1, func2, func3, func4, func5]

@@ -28,4 +28,4 @@ def func5(l: list):
             unique_list.append(item)
     return unique_list
 
-funcs = [func1, func2, func3, func4, func5]
+cot_gpt = [func1, func2, func3, func4, func5]
