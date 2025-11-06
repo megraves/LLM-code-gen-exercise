@@ -116,4 +116,4 @@ def func5(n: int) -> int:
     return largest_factor(n)
 
 
-funcs = [func1, func2, func3, func4, func5]
+srepair_gpt = [func1, func2, func3, func4, func5]

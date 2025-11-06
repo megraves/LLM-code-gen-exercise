@@ -147,4 +147,4 @@ def func5(n: int) -> int:
     # Recursive step: Find the largest prime factor of the reduced number (n // smallest_factor)
     return func5(n // smallest_factor)
 
-funcs = [func1, func2, func3, func4, func5]
+cot_gemini = [func1, func2, func3, func4, func5]

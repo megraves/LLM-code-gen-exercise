@@ -186,4 +186,4 @@ def func5(n: int) -> int:
     # Otherwise, the largest factor found by the sieve is the answer
     return largest_factor_from_sieve
 
-funcs = [func1, func2, func3, func4, func5]
+srepair_gemini = [func1, func2, func3, func4, func5]

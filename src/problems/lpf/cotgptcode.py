@@ -1,16 +1,3 @@
-Nice — here are five *different* Python solutions (func1 through func5) that compute the largest prime factor of `n`. I’ll give a short approach summary (no private chain-of-thought), then a single file containing all five implementations plus quick tests.
-
-### Approaches (short)
-
-* **func1:** Simple trial division (check every i from 2 upward, divide out factors).
-* **func2:** Handle factor 2 separately, then test odd divisors only (faster than func1).
-* **func3:** Sieve primes up to `sqrt(n)` and divide by primes (useful when `n` has small factors).
-* **func4:** Pollard’s Rho with Miller–Rabin primality test — good for large composites.
-* **func5:** Wheel (6k ± 1) trial division (skip numbers that aren’t of form 6k±1).
-
----
-
-```python
 # largest_prime_factors.py
 import math
 import random
@@ -184,30 +171,4 @@ def func5(n: int) -> int:
         max_pf = max(max_pf, n)
     return max_pf
 
-
-# -----------------------
-# Quick tests (examples)
-# -----------------------
-if __name__ == "__main__":
-    tests = [
-        (13195, 29),
-        (2048, 2),
-        (2 * 3 * 5 * 7 * 11, 11),
-        (600851475143, 6857),  # famous Project Euler test number
-    ]
-    funcs = [func1, func2, func3, func4, func5]
-    for f in funcs:
-        print(f"Testing {f.__name__}")
-        for n, expected in tests:
-            result = f(n)
-            ok = "OK" if result == expected else f"WRONG (got {result}, expected {expected})"
-            print(f"  {n} -> {result}: {ok}")
-        print()
-```
-
----
-
-If you want:
-
-* I can trim this into a single shorter function that chooses the best method automatically based on the size of `n`.
-* Or I can add type checks / more unit tests. Which would you prefer?
+cot_gpt = [func1, func2, func3, func4, func5]
