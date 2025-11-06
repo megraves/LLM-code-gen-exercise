@@ -52,4 +52,4 @@ def func5(numbers: List[int]) -> Tuple[int, int]:
         s, p = s + x, p * x
     return s, p
 
-funcs=[func1, func2, func3, func4, func5]
+cot_gpt =[func1, func2, func3, func4, func5]

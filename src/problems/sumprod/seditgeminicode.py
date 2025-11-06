@@ -67,4 +67,4 @@ def func5(numbers: List[int]) -> Tuple[int, int]:
 
     return (total_sum, total_product)
 
-funcs = [func1, func2, func3, func4, func5]
+sedit_gemini = [func1, func2, func3, func4, func5]

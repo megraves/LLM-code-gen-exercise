@@ -47,4 +47,4 @@ def func5(numbers: List[int]) -> Tuple[int, int]:
     arr = np.array(numbers)
     return (int(arr.sum()), int(arr.prod()))
 
-funcs = [func1, func2, func3, func4, func5]
+sedit_gpt = [func1, func2, func3, func4, func5]
