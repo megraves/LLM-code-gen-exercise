@@ -1,5 +1,5 @@
 # From humaneval: https://huggingface.co/datasets/openai/openai_humaneval/viewer/openai_humaneval/test?views%5B%5D=test&row=18
-from solutions import funcs
+from src.problems.substr.scotgeminicode import funcs
 from pass_at_k_metric import pass_at_k
 
 def check_substring_occurrences(func):

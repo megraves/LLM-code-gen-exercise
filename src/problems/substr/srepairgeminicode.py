@@ -131,4 +131,4 @@ def func5(string: str, substring: str) -> int:
     # Start the recursion from the beginning of the string
     return recursive_count(0)
 
-funcs = [func1, func2, func3, func4, func5]
+srepair_gemini = [func1, func2, func3, func4, func5]

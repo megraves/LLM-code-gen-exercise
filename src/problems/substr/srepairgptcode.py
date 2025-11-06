@@ -54,4 +54,4 @@ def func5(string: str, substring: str) -> int:
         start = pos + 1  # move one step to allow overlapping
     return count
 
-funcs=[func1, func2, func3, func4, func5]
+srepair_gpt=[func1, func2, func3, func4, func5]

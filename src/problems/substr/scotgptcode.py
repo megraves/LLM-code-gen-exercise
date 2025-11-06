@@ -41,4 +41,4 @@ def func5(string: str, substring: str) -> int:
                if string[i:i+len(substring)] == substring)
 
 
-funcs = [func1, func2, func3, func4, func5]
+scot_gpt = [func1, func2, func3, func4, func5]

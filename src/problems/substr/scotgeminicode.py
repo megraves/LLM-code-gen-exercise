@@ -125,4 +125,4 @@ def func5(string: str, substring: str) -> int:
     # This is what ensures overlapping is counted (e.g., check at index 0, then index 1, then index 2, etc.)
     return count + func5(string[1:], substring)
 
-funcs = [func1, func2, func3, func4, func5]
+scot_gemini = [func1, func2, func3, func4, func5]
