@@ -85,4 +85,4 @@ def func5(string: str) -> str:
     return re.sub(r'[a-zA-Z]', replacer, string)
 
 
-funcs = [func1, func2, func3, func4, func5]
+scot_gemini = [func1, func2, func3, func4, func5]

@@ -72,4 +72,4 @@ if __name__ == "__main__":
             print(f"  {s} -> {f(s)}")
         print()
 
-funcs = [func1, func2, func3, func4, func5]
+splan_gpt = [func1, func2, func3, func4, func5]

@@ -62,4 +62,4 @@ def func5(s: str) -> str:
     # Using [A-Za-z] keeps the regex fast; change to r'\w' or r'\p{L}' with regex module for more coverage.
     return re.sub(r'[A-Za-z]', flip, s)
 
-funcs = [func1, func2, func3, func4, func5]
+scot_gpt = [func1, func2, func3, func4, func5]
