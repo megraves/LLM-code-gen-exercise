@@ -44,4 +44,4 @@ def func5(numbers: List[float]) -> List[float]:
         return [0.0] * len(numbers)
     return ((arr - min_val) / range_val).tolist()
 
-funcs = [func1, func2, func3, func4, func5]
+sedit_gpt = [func1, func2, func3, func4, func5]

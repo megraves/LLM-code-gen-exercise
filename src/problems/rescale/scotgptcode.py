@@ -54,4 +54,4 @@ def func5(numbers: List[float]) -> List[float]:
         scaled_numbers[i] = (x - min_val) / range_val
     return scaled_numbers
 
-funcs = [func1, func2, func3, func4, func5]
+scot_gpt = [func1, func2, func3, func4, func5]

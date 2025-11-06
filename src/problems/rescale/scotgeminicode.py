@@ -91,4 +91,4 @@ def func5(numbers: List[float]) -> List[float]:
     return rescaled_list
 
 
-funcs = [func1, func2, func3, func4, func5]
+scot_gemini = [func1, func2, func3, func4, func5]

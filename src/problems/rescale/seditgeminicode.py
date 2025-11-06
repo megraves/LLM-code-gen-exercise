@@ -121,4 +121,4 @@ def func5(numbers: List[float]) -> List[float]:
 # print(f"Func 4: {func4(test_data)}")
 # print(f"Func 5: {func5(test_data)}")
 
-funcs = [func1, func2, func3, func4, func5]
+sedit_gemini = [func1, func2, func3, func4, func5]
