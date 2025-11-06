@@ -79,4 +79,4 @@ def func5(n):
 # print(f"func4(5): {func4(5)}")
 # print(f"func5(5): {func5(5)}")
 
-funcs = [func1, func2, func3, func4, func5]
+cot_gemini = [func1, func2, func3, func4, func5]

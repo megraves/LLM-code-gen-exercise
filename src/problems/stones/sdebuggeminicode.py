@@ -110,4 +110,4 @@ for i, func in enumerate(functions):
 #    - Review: **Most optimized for speed**, using a highly optimized C-implemented built-in function.
 #    - Bug Risk: High. The crucial part is correctly calculating the **exclusive stop value** ($3n$). A common mistake is using the last term ($3n-2$) as the stop value. (Correct: $3n$)
 
-funcs = [func1, func2, func3, func4, func5]
+sdebug_gemini = [func1, func2, func3, func4, func5]

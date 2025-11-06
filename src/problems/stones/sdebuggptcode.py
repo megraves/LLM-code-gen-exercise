@@ -32,4 +32,4 @@ def func5(n):
     # The ith level has n + 2*(i-1) stones
     return [n + 2*i for i in range(n)]
 
-funcs = [func1, func2, func3, func4, func5]
+sdebug_gpt = [func1, func2, func3, func4, func5]

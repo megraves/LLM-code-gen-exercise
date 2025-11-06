@@ -36,4 +36,4 @@ def func5(n):
     return list(accumulate(repeat(2, n), initial=start))[:-1]
 
 
-funcs = [func1, func2, func3, func4, func5]
+cot_gpt = [func1, func2, func3, func4, func5]
