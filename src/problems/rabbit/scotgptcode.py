@@ -29,23 +29,23 @@ def func5(number, need, remaining):
     return [total, remaining_after]
 
 # Test examples
-if __name__ == "__main__":
-    test_cases = [
-        (5, 6, 10),
-        (4, 8, 9),
-        (1, 10, 10),
-        (2, 11, 5),
-        (3, 2, 1)
-    ]
+# if __name__ == "__main__":
+#     test_cases = [
+#         (5, 6, 10),
+#         (4, 8, 9),
+#         (1, 10, 10),
+#         (2, 11, 5),
+#         (3, 2, 1)
+#     ]
 
-    for i, (number, need, remaining) in enumerate(test_cases, 1):
-        print(f"Test case {i}:")
-        print("func1:", func1(number, need, remaining))
-        print("func2:", func2(number, need, remaining))
-        print("func3:", func3(number, need, remaining))
-        print("func4:", func4(number, need, remaining))
-        print("func5:", func5(number, need, remaining))
-        print()
+#     for i, (number, need, remaining) in enumerate(test_cases, 1):
+#         print(f"Test case {i}:")
+#         print("func1:", func1(number, need, remaining))
+#         print("func2:", func2(number, need, remaining))
+#         print("func3:", func3(number, need, remaining))
+#         print("func4:", func4(number, need, remaining))
+#         print("func5:", func5(number, need, remaining))
+#         print()
 
 
 scot_gpt = [func1, func2, func3, func4, func5]

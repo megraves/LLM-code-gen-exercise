@@ -1,11 +1,11 @@
 # import for testing pass@k metric
-from .pass_at_k_metric import pass_at_k
+from ..pass_at_k_metric import pass_at_k
 
 # Import the generated functions to be tested
-from ..problems.rabbit.scotgptcode import scot_gpt
-from ..problems.rabbit.scotgeminicode import scot_gemini
-from ..problems.rabbit.seditgptcode import sedit_gpt
-from ..problems.rabbit.seditgeminicode import sedit_gemini
+from ...problems.rabbit.scotgptcode import scot_gpt
+from ...problems.rabbit.scotgeminicode import scot_gemini
+from ...problems.rabbit.seditgptcode import sedit_gpt
+from ...problems.rabbit.seditgeminicode import sedit_gemini
 
 rabbit_code = [scot_gpt, scot_gemini, sedit_gpt, sedit_gemini]
 

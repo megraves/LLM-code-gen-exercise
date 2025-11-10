@@ -58,18 +58,4 @@ def func5(string: str) -> str:
     table = str_module.maketrans(str_module.ascii_lowercase + str_module.ascii_uppercase, trans_table)
     return string.translate(table)
 
-
-# -------------------------
-# Example usage
-# -------------------------
-if __name__ == "__main__":
-    test_strings = ["Hello", "Python3!", "123ABCabc"]
-    funcs = [func1, func2, func3, func4, func5]
-
-    for f in funcs:
-        print(f"{f.__name__} results:")
-        for s in test_strings:
-            print(f"  {s} -> {f(s)}")
-        print()
-
 splan_gpt = [func1, func2, func3, func4, func5]

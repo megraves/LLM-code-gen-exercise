@@ -6,7 +6,7 @@ def func1(numbers: List[float]) -> List[float]:
     min_val = min(numbers)
     max_val = max(numbers)
     range_val = max_val - min_val
-    if range_val == 0:
+    if range_val == 0.0:  # Small bug here? 0.0 range val?
         return [0.0 for _ in numbers]
     return [(x - min_val) / range_val for x in numbers]
 

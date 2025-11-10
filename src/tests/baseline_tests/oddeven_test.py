@@ -1,11 +1,11 @@
 # import for testing pass@k metric
-from .pass_at_k_metric import pass_at_k
+from ..pass_at_k_metric import pass_at_k
 
 # Import the generated functions to be tested
-from ..problems.oddeven.cotgptcode import cot_gpt
-from ..problems.oddeven.cotgeminicode import cot_gemini
-from ..problems.oddeven.sdebuggptcode import sdebug_gpt
-from ..problems.oddeven.sdebuggeminicode import sdebug_gemini
+from ...problems.oddeven.cotgptcode import cot_gpt
+from ...problems.oddeven.cotgeminicode import cot_gemini
+from ...problems.oddeven.sdebuggptcode import sdebug_gpt
+from ...problems.oddeven.sdebuggeminicode import sdebug_gemini
 
 oddeven_code = [cot_gpt, cot_gemini, sdebug_gpt, sdebug_gemini]
 

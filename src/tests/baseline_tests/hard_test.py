@@ -1,11 +1,11 @@
 # import for testing pass@k metric
-from .pass_at_k_metric import pass_at_k
+from ..pass_at_k_metric import pass_at_k
 
 # Import the generated functions to be tested
-from ..problems.hard.firstgptcode import first_gpt
-from ..problems.hard.firstgeminicode import first_gemini
-from ..problems.hard.secondgptcode import second_gpt
-from ..problems.hard.secondgeminicode import second_gemini
+from ...problems.hard.firstgptcode import first_gpt
+from ...problems.hard.firstgeminicode import first_gemini
+from ...problems.hard.secondgptcode import second_gpt
+from ...problems.hard.secondgeminicode import second_gemini
 
 hard_code = [first_gpt, first_gemini, second_gpt, second_gemini]
 

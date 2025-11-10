@@ -95,23 +95,23 @@ def func5(number, need, remaining):
 
 
 # Example Usage and Verification:
-if __name__ == '__main__':
-    examples = [
-        (5, 6, 10, [11, 4]),  # Enough stock
-        (4, 8, 9, [12, 1]),   # Enough stock
-        (1, 10, 10, [11, 0]), # Exactly enough stock
-        (2, 11, 5, [7, 0])    # Not enough stock
-    ]
+# if __name__ == '__main__':
+#     examples = [
+#         (5, 6, 10, [11, 4]),  # Enough stock
+#         (4, 8, 9, [12, 1]),   # Enough stock
+#         (1, 10, 10, [11, 0]), # Exactly enough stock
+#         (2, 11, 5, [7, 0])    # Not enough stock
+#     ]
 
-    functions = [func1, func2, func3, func4, func5]
+#     functions = [func1, func2, func3, func4, func5]
 
-    print("--- Function Verification ---")
-    for func in functions:
-        func_name = func.__name__
-        print(f"\nTesting {func_name}:")
-        for number, need, remaining, expected in examples:
-            result = func(number, need, remaining)
-            status = "PASS" if result == expected else f"FAIL (Expected: {expected}, Got: {result})"
-            print(f"  eat({number}, {need}, {remaining}) -> {result} | {status}")
+#     print("--- Function Verification ---")
+#     for func in functions:
+#         func_name = func.__name__
+#         print(f"\nTesting {func_name}:")
+#         for number, need, remaining, expected in examples:
+#             result = func(number, need, remaining)
+#             status = "PASS" if result == expected else f"FAIL (Expected: {expected}, Got: {result})"
+#             print(f"  eat({number}, {need}, {remaining}) -> {result} | {status}")
 
 sedit_gemini = [func1, func2, func3, func4, func5]

@@ -28,19 +28,19 @@ def func5(number, need, remaining):
 
 
 # Example usage / testing
-if __name__ == "__main__":
-    examples = [
-        (5, 6, 10),
-        (4, 8, 9),
-        (1, 10, 10),
-        (2, 11, 5)
-    ]
+# if __name__ == "__main__":
+#     examples = [
+#         (5, 6, 10),
+#         (4, 8, 9),
+#         (1, 10, 10),
+#         (2, 11, 5)
+#     ]
     
-    for f in [func1, func2, func3, func4, func5]:
-        print(f"{f.__name__}:")
-        for ex in examples:
-            print(f"  {ex} -> {f(*ex)}")
-        print()
+#     for f in [func1, func2, func3, func4, func5]:
+#         print(f"{f.__name__}:")
+#         for ex in examples:
+#             print(f"  {ex} -> {f(*ex)}")
+#         print()
 
 
 sedit_gpt = [func1, func2, func3, func4, func5]

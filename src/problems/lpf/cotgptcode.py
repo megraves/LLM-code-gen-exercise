@@ -7,6 +7,7 @@ def func1(n: int) -> int:
     """Simple trial division.
     Repeatedly divide by the smallest factor found, track the maximum.
     """
+    # SEEDED BUG: omit edge case check to see if input is n >= 2 (1 does not have prime factors)
     if n < 2:
         raise ValueError("n must be >= 2")
     max_pf = 1

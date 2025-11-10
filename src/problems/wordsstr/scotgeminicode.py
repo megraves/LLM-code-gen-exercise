@@ -117,14 +117,14 @@ def func5(s):
 # Example Usage:
 # ----------------------------------------------------------------------
 
-test_string = "apple,banana orange,grape,  kiwi "
-print(f"Input: '{test_string}'")
+# test_string = "apple,banana orange,grape,  kiwi "
+# print(f"Input: '{test_string}'")
 
-print(f"func1 (Replace/Default Split): {func1(test_string)}")
-print(f"func2 (re.split):              {func2(test_string)}")
-print(f"func3 (itertools/Nested Split): {func3(test_string)}")
-print(f"func4 (Two-Pass Clean/Split):  {func4(test_string)}")
-print(f"func5 (Iterative Split):       {func5(test_string)}")
+# print(f"func1 (Replace/Default Split): {func1(test_string)}")
+# print(f"func2 (re.split):              {func2(test_string)}")
+# print(f"func3 (itertools/Nested Split): {func3(test_string)}")
+# print(f"func4 (Two-Pass Clean/Split):  {func4(test_string)}")
+# print(f"func5 (Iterative Split):       {func5(test_string)}")
 
 # Expected Output for all: ['apple', 'banana', 'orange', 'grape', 'kiwi']
 

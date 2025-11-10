@@ -1,11 +1,11 @@
 # import for testing pass@k metric
-from .pass_at_k_metric import pass_at_k
+from ..pass_at_k_metric import pass_at_k
 
 # Import the generated functions to be tested
-from ..problems.sumprod.cotgptcode import cot_gpt
-from ..problems.sumprod.cotgeminicode import cot_gemini
-from ..problems.sumprod.seditgptcode import sedit_gpt
-from ..problems.sumprod.seditgeminicode import sedit_gemini
+from ...problems.sumprod.cotgptcode import cot_gpt
+from ...problems.sumprod.cotgeminicode import cot_gemini
+from ...problems.sumprod.seditgptcode import sedit_gpt
+from ...problems.sumprod.seditgeminicode import sedit_gemini
 
 sumprod_code = [cot_gpt, cot_gemini, sedit_gpt, sedit_gemini]
 

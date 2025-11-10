@@ -1,11 +1,11 @@
 # import for testing pass@k metric
-from .pass_at_k_metric import pass_at_k
+from ..pass_at_k_metric import pass_at_k
 
 # Import the generated functions to be tested
-from ..problems.lpf.cotgptcode import cot_gpt
-from ..problems.lpf.cotgeminicode import cot_gemini
-from ..problems.lpf.srepairgptcode import srepair_gpt
-from ..problems.lpf.srepairgeminicode import srepair_gemini
+from ...problems.lpf.cotgptcode import cot_gpt
+from ...problems.lpf.cotgeminicode import cot_gemini
+from ...problems.lpf.srepairgptcode import srepair_gpt
+from ...problems.lpf.srepairgeminicode import srepair_gemini
 
 lpf_code = [cot_gpt, cot_gemini, srepair_gpt, srepair_gemini]
 

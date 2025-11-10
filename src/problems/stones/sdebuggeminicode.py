@@ -61,31 +61,31 @@ def func5(n):
 
 # --- Debugging/Testing Section ---
 # Define test cases
-test_cases = [
-    (3, [3, 5, 7]),  # Odd n, next odd
-    (4, [4, 6, 8, 10]),  # Even n, next even
-    (1, [1]),
-    (6, [6, 8, 10, 12, 14, 16])
-]
+# test_cases = [
+#     (3, [3, 5, 7]),  # Odd n, next odd
+#     (4, [4, 6, 8, 10]),  # Even n, next even
+#     (1, [1]),
+#     (6, [6, 8, 10, 12, 14, 16])
+# ]
 
-functions = [func1, func2, func3, func4, func5]
+# functions = [func1, func2, func3, func4, func5]
 
-# Run tests and print results
-print("--- Debugging Test Run ---")
-for i, func in enumerate(functions):
-    func_name = f"func{i+1}"
-    print(f"\nTesting {func_name}:")
+# # Run tests and print results
+# print("--- Debugging Test Run ---")
+# for i, func in enumerate(functions):
+#     func_name = f"func{i+1}"
+#     print(f"\nTesting {func_name}:")
     
-    all_passed = True
-    for n, expected in test_cases:
-        result = func(n)
-        status = "PASSED" if result == expected else "FAILED"
-        if status == "FAILED":
-            all_passed = False
-            print(f"  Input n={n}: Expected {expected}, Got {result} ({status})")
+#     all_passed = True
+#     for n, expected in test_cases:
+#         result = func(n)
+#         status = "PASSED" if result == expected else "FAILED"
+#         if status == "FAILED":
+#             all_passed = False
+#             print(f"  Input n={n}: Expected {expected}, Got {result} ({status})")
         
-    if all_passed:
-        print(f"  All {len(test_cases)} tests passed for {func_name}. ✅")
+#     if all_passed:
+#         print(f"  All {len(test_cases)} tests passed for {func_name}. ✅")
 
 
 # --- General Debugging Review Summary ---

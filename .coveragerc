@@ -1,0 +1,20 @@
+[run]
+# Enable branch coverage measurement
+# branch = True
+omit =
+    tests/*
+    */tests/*
+    *test*.py
+
+[html]
+# Specify the directory for the HTML report (defaults to htmlcov)
+directory = htmlcov
+# Display an indication on each line of which contexts executed the line (optional, useful for debugging)
+#show_contexts = True
+
+
+[report]
+# Ensure missing lines are shown in the report (default for HTML, but good to be explicit)
+show_missing = True
+# Skip files that are 100% covered from the report (optional)
+skip_empty = True

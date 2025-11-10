@@ -1,11 +1,11 @@
 # import for testing pass@k metric
-from .pass_at_k_metric import pass_at_k
+from ..pass_at_k_metric import pass_at_k
 
 # Import the generated functions to be tested
-from ..problems.sort.cotgptcode import cot_gpt
-from ..problems.sort.cotgeminicode import cot_gemini
-from ..problems.sort.splangptcode import splan_gpt
-from ..problems.sort.splangeminicode import splan_gemini
+from ...problems.sort.cotgptcode import cot_gpt
+from ...problems.sort.cotgeminicode import cot_gemini
+from ...problems.sort.splangptcode import splan_gpt
+from ...problems.sort.splangeminicode import splan_gemini
 
 sort_code = [cot_gpt, cot_gemini, splan_gpt, splan_gemini]
 

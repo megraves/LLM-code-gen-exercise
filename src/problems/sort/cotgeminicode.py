@@ -86,24 +86,24 @@ def func5(l: list) -> list:
     return [key for key, group in itertools.groupby(sorted_l)]
 
 
-if __name__ == '__main__':
-    # Example usage and testing
-    test_list = [5, 3, 5, 2, 3, 3, 9, 0, 123, -1, 5]
-    expected_result = [-1, 0, 2, 3, 5, 9, 123]
+# if __name__ == '__main__':
+#     # Example usage and testing
+#     test_list = [5, 3, 5, 2, 3, 3, 9, 0, 123, -1, 5]
+#     expected_result = [-1, 0, 2, 3, 5, 9, 123]
 
-    print(f"Test List: {test_list}")
-    print("-" * 30)
+#     print(f"Test List: {test_list}")
+#     print("-" * 30)
 
-    results = {
-        'func1': func1(test_list),
-        'func2': func2(test_list),
-        'func3': func3(test_list),
-        'func4': func4(test_list),
-        'func5': func5(test_list)
-    }
+#     results = {
+#         'func1': func1(test_list),
+#         'func2': func2(test_list),
+#         'func3': func3(test_list),
+#         'func4': func4(test_list),
+#         'func5': func5(test_list)
+#     }
 
-    for name, result in results.items():
-        is_correct = "CORRECT" if result == expected_result else "INCORRECT"
-        print(f"{name}: {result} ({is_correct})")
+#     for name, result in results.items():
+#         is_correct = "CORRECT" if result == expected_result else "INCORRECT"
+#         print(f"{name}: {result} ({is_correct})")
 
 cot_gemini = [func1, func2, func3, func4, func5]

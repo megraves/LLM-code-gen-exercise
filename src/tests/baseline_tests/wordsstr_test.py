@@ -1,11 +1,11 @@
 # import for testing pass@k metric
-from .pass_at_k_metric import pass_at_k
+from ..pass_at_k_metric import pass_at_k
 
 # Import the generated functions to be tested
-from ..problems.wordsstr.scotgptcode import scot_gpt
-from ..problems.wordsstr.scotgeminicode import scot_gemini
-from ..problems.wordsstr.splangptcode import splan_gpt
-from ..problems.wordsstr.splangeminicode import splan_gemini
+from ...problems.wordsstr.scotgptcode import scot_gpt
+from ...problems.wordsstr.scotgeminicode import scot_gemini
+from ...problems.wordsstr.splangptcode import splan_gpt
+from ...problems.wordsstr.splangeminicode import splan_gemini
 
 wordsstr_code = [scot_gpt, scot_gemini, splan_gpt, splan_gemini]
 
