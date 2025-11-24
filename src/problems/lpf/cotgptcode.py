@@ -8,8 +8,8 @@ def func1(n: int) -> int:
     Repeatedly divide by the smallest factor found, track the maximum.
     """
     # SEEDED BUG: omit edge case check to see if input is n >= 2 (1 does not have prime factors)
-    if n < 2:
-        raise ValueError("n must be >= 2")
+    # if n < 2:
+    #     raise ValueError("n must be >= 2")
     max_pf = 1
     i = 2
     while i * i <= n:
@@ -24,8 +24,8 @@ def func1(n: int) -> int:
 
 def func2(n: int) -> int:
     """Optimized trial division: remove factor 2, then test odd divisors only."""
-    if n < 2:
-        raise ValueError("n must be >= 2")
+    # if n < 2:
+    #     raise ValueError("n must be >= 2")
     max_pf = 1
     # Remove factors of 2
     while n % 2 == 0:
@@ -44,8 +44,8 @@ def func2(n: int) -> int:
 
 
 def _sieve_primes_up_to(limit: int) -> List[int]:
-    if limit < 2:
-        return []
+    # if limit < 2:
+    #     return []
     sieve = bytearray(b'\x01') * (limit + 1)
     sieve[0:2] = b'\x00\x00'
     for p in range(2, int(limit**0.5) + 1):
@@ -58,8 +58,8 @@ def _sieve_primes_up_to(limit: int) -> List[int]:
 
 def func3(n: int) -> int:
     """Use a prime sieve up to sqrt(n), divide by primes only."""
-    if n < 2:
-        raise ValueError("n must be >= 2")
+    # if n < 2:
+    #     raise ValueError("n must be >= 2")
     max_pf = 1
     limit = math.isqrt(n) + 1
     primes = _sieve_primes_up_to(limit)
@@ -77,8 +77,8 @@ def func3(n: int) -> int:
 
 # --- For func4: Miller-Rabin (deterministic for 64-bit) + Pollard's Rho ---
 def _is_probable_prime(n: int) -> bool:
-    if n < 2:
-        return False
+    # if n < 2:
+    #     return False
     small_primes = (2, 3, 5, 7, 11, 13, 17, 19, 23, 29)
     for p in small_primes:
         if n % p == 0:
@@ -131,8 +131,8 @@ def _pollards_rho(n: int) -> int:
 
 
 def _factor_pollard(n: int, factors: List[int]):
-    if n == 1:
-        return
+    # if n == 1:
+    #     return
     if _is_probable_prime(n):
         factors.append(n)
         return
@@ -143,8 +143,8 @@ def _factor_pollard(n: int, factors: List[int]):
 
 def func4(n: int) -> int:
     """Pollard's Rho factorization with Miller-Rabin primality check."""
-    if n < 2:
-        raise ValueError("n must be >= 2")
+    # if n < 2:
+    #     raise ValueError("n must be >= 2")
     factors: List[int] = []
     _factor_pollard(n, factors)
     return max(factors)
@@ -152,8 +152,8 @@ def func4(n: int) -> int:
 
 def func5(n: int) -> int:
     """Wheel (6k ± 1) trial division."""
-    if n < 2:
-        raise ValueError("n must be >= 2")
+    # if n < 2:
+    #     raise ValueError("n must be >= 2")
     # Remove factors 2 and 3
     max_pf = 1
     for p in (2, 3):

@@ -84,8 +84,8 @@ def func3(n: int) -> int:
     This approach recursively finds the smallest prime factor, and then calls itself 
     on the quotient, returning the maximum prime found at any step.
     """
-    if n <= 1:
-        return 1
+    # if n <= 1:
+    #     return 1
     
     # Find the smallest prime factor (f) of n
     f = _find_smallest_factor(n)
